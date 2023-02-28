@@ -50,10 +50,10 @@ function myFunction(targetDiv) {
   var x = document.getElementById(targetDiv);
   if (x.style.width === "98px") {
     x.style.width = "100%";
-    x.style.background = "darkgray";
+    x.style.background = "#LightSteelBlue"; // LightSteelBlue #B0C4DE
   } else {
     x.style.width = "98px";
-    x.style.background = "maroon";
+    x.style.background = "DarkGray"; // DarkGray #A9A9A9
   }
 }
 </script>
@@ -75,6 +75,8 @@ if(document.location.href.indexOf("vt=") !== -1){
                 var v2;
                 var v3;
                 var v4;
+		var v5;
+		var v6;
               if(document.location.href.indexOf("?v") == -1){
 				      document.write('add variables to the url (v1 up to v4): <br><strong>?v1=123456&v2=...</strong>');
               }
@@ -93,6 +95,15 @@ if(document.location.href.indexOf("vt=") !== -1){
               if(document.location.href.indexOf("v4=") !== -1){
 				      document.write('<li class="flex-item" id="myDiv4" onclick="myFunction(\'myDiv4\')"><iframe scrolling="yes" frameborder="0" style="width: 100%; height: 100%; overflow: hidden;" src="https://checkvist.com/checklists/' + getQueryVariable("v4") + '?widget=true"></iframe></li>');
               }
+
+              if(document.location.href.indexOf("v5=") !== -1){
+				      document.write('<li class="flex-item" id="myDiv5" onclick="myFunction(\'myDiv5\')"><iframe scrolling="yes" frameborder="0" style="width: 100%; height: 100%; overflow: hidden;" src="https://checkvist.com/checklists/' + getQueryVariable("v5") + '?widget=true"></iframe></li>');
+              }
+
+              if(document.location.href.indexOf("v6=") !== -1){
+				      document.write('<li class="flex-item" id="myDiv6" onclick="myFunction(\'myDiv6\')"><iframe scrolling="yes" frameborder="0" style="width: 100%; height: 100%; overflow: hidden;" src="https://checkvist.com/checklists/' + getQueryVariable("v6") + '?widget=true"></iframe></li>');
+              }
+		      
                                 
               </script>
 </ul>
